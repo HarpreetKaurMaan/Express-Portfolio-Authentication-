@@ -1,0 +1,20 @@
+<!--
+error.ejs
+Harpreet Kaur
+301200841
+-->
+
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/main_nav.ejs') %>
+
+<div id="content-wrapper">
+    <div class="container full-height px-lg-5">
+        <h1><%= message %></h1>
+        <h2><%= error.status %></h2>
+        <pre><%= error.stack %></pre>
+    </div>
+</div>
+
+
+<%- include ('partials/bottom_nav.ejs') %>
+<%- include ('partials/footer.ejs') %>

@@ -1,0 +1,82 @@
+ <!--
+main_nav.ejs
+Harpreet Kaur
+301200841
+-->
+ 
+ <!--Main navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container flex-lg-column">
+      <a class="navbar-brand mx-lg-auto mb-lg-4" href="/">
+        <span class="h3 fw-bold d-block d-lg-none">Harpreet</span>
+        <img src="./Assets/images/portfolio.png" class="d-none d-lg-block rounded-circle" alt="Harpreet Kaur">
+      
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>        
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        
+        <ul class="navbar-nav ml-auto flex-lg-column text-lg-center">       
+          
+          <li <% if(title == 'Home'){%>
+            class="nav-item current"
+          <%} else {%>
+            class="nav-item"
+          <%}%>>
+          <a class="nav-link" aria-current="page" href="/home"><i class="fa-solid fa-house"></i> Home </a> <!--fa-lg to make icon bigger-->
+          </li>
+
+          <li <% if(title === 'About'){%>
+            class="nav-item current"
+          <%} else {%>
+            class="nav-item"
+          <%}%>>
+          <a class="nav-link" href="/about"><i class="fa-solid fa-circle-info"></i> About </a> <!--fa-lg to make icon bigger-->
+          </li>
+
+          <li <% if(title === 'Products'){%>
+            class="nav-item current"
+          <%} else {%>
+            class="nav-item"
+          <%}%>>
+          <a class="nav-link" href="/projects"><i class="fa-solid fa-shop"></i> Projects </a> <!--fa-lg to make icon bigger-->
+          </li>          
+
+          <li <% if(title === 'Services'){%>
+            class="nav-item current"
+          <%} else {%>
+            class="nav-item"
+          <%}%>>
+          <a class="nav-link" href="/services"><i class="fa-solid fa-bell-concierge"></i> Services </a> <!--fa-lg to make icon bigger-->
+          </li>
+
+          <li <% if(title === 'Contact Me'){%>
+            class="nav-item current"
+          <%} else {%>
+            class="nav-item"
+          <%}%>>
+          <a class="nav-link" href="/contactme"><i class="fa-solid fa-mobile-screen-button"></i> Reach Me</a> <!--fa-lg to make icon bigger-->
+          </li>    
+
+          <li <% if(title === 'Contact List'){%>
+            class="nav-item current"
+          <%} else {%>
+            class="nav-item"
+          <%}%>>
+          <a class="nav-link" href="/contact-list"><i class="fa-solid fa-list"></i> Contact List</a> <!--fa-lg to make icon bigger-->
+          </li>  
+
+          <% if (typeof displayName == 'string' && displayName) {%>
+            <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %> </li>
+            <li class="nav-item"><a href="/logout" class="nav-link">
+              <i class="fas fa-lag fa-sign-out-alt"></i>Logout</a></li>          
+          <% } else { %>
+            <li class="nav-item"><a href="/login" class="nav-link">
+              <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
+          <% } %> 
+
+        </ul>                
+      </div>
+    </div>
+  </nav> 
